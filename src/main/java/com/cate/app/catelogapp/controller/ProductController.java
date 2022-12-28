@@ -13,7 +13,7 @@ public class ProductController {
 	@GetMapping
 	public ResponseEntity<String> allProducts() {
 		
-		return ResponseEntity.status(HttpStatus.OK).body("Test API!");
+		return ResponseEntity.status(HttpStatus.OK).body("Test Product API!");
 	}
 
 }
