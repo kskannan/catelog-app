@@ -12,10 +12,14 @@ public class ErrorAdvice {
 	public ResponseEntity<String> runtimeError(RuntimeException e) {
 		return error(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
 	}
+	
+	@ExceptionHandler(value = {CateNotFound.class})
+	public ResponseEntity<String> notFound(CateNotFound e){
+		return error(HttpStatus.NOT_FOUND, e.getMessage());
+	}
 
 	
 	private ResponseEntity<String> error(HttpStatus status, String error){
-		System.out.println(error);
 		return ResponseEntity.status(status).body(error);
 	}
 }

@@ -4,7 +4,6 @@ package com.cate.app.catelogapp;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -21,7 +20,6 @@ public class WebConfig extends WebMvcConfigurationSupport {
 	public MappingJackson2HttpMessageConverter customJackson2HttpMessageConverter() {
 		MappingJackson2HttpMessageConverter jsonConverter = new MappingJackson2HttpMessageConverter();
 		ObjectMapper objectMapper = new ObjectMapper();
-		objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 		objectMapper.registerModule(new Hibernate5Module());
 
 		jsonConverter.setObjectMapper(objectMapper);
