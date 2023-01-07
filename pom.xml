@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.cate.app</groupId>
 	<artifactId>catelog-app</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>catelog-app</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Catelog search app</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
